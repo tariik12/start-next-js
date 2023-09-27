@@ -1,24 +1,24 @@
+
 import './globals.css'
-import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'start next js',
   description: 'start next js',
 }
-
  const  RootLayout =({
   children,
-}: {
-  children: React.ReactNode
 })=> {
+  console.log('from RootLayout')
   return (
     <html lang="en">
       <body className={inter.className}>
         <nav className='text-center'>
-          <a href="#">Home</a>
+          <Link href="/">Home</Link>
+          <Link href="/about">About</Link>
         </nav>
         {children}
         <footer className='text-center'> Copy right by Tarik</footer>
